@@ -7,7 +7,6 @@
  */
 const memoize = cb => {
   const cache = {};
-
   return (...args) => {
     const cacheKey = args.join();
 
@@ -20,3 +19,5 @@ const memoize = cb => {
     return cache[cacheKey];
   };
 };
+
+export default memoize;
